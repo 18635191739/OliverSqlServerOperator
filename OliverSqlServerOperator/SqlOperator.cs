@@ -96,6 +96,16 @@ namespace OliverSqlServerOperator
         }
 
         /// <summary>
+        /// 执行命令，返回结果table中第一个cell内容
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
+        public static string ExecuteSQLGetFirstCell(string str)
+        {
+            return ExecuteSQLReturnDT(str).Rows[0][0].ToString();
+        }
+
+        /// <summary>
         /// 在数据库中执行命令
         /// </summary>
         /// <param name="str">需要执行的命令</param>
